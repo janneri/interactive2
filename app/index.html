@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive</title>
+    <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+</head>
+<body ng-app='igApp' ng-controller="ChatCtrl">
+    <nav ng-hide="connected" class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="alert alert-danger">Disconnected!</div>
+    </nav>
+
+    <div class="container" >
+
+        <h3>Speak!</h3>
+
+        <div class="row">
+            <div class="col-md-12">
+                <form ng-submit="speak()">
+                    <div class="input-group">
+                        <input class="form-control" type="text" ng-model="message"/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary " ng-click="speak()">
+                                <span class="glyphicon glyphicon-bullhorn">&nbsp;</span>Speak
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h3>What has been said?</h3>
+
+        <div class="col-md-12">
+            <blockquote ng-repeat="msg in messages track by $index">{{ msg }}</blockquote>
+        </div>
+
+    </div>
+
+    <script src="components/angular/angular.min.js"></script>
+    <script src="components/socket.io-client/dist/socket.io.min.js"></script>
+    <script src="components/angular-socket-io/socket.js"></script>
+
+    <script src="scripts/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "interactive2",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Ari Autio <ari.autio@iki.fi>",
+  "license": "None given.",
+  "devDependencies": {
+    "connect": "~2.8.8",
+    "socket.io": "~0.9.16"
+  }
+}
