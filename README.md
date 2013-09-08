@@ -9,7 +9,7 @@ Prototyping interactive talk, presentation and hosting. Now with Node.js, Angula
 4. Run node app.js. Server is launched in port 3000.
 5. Open / to chat anonymously with all participants.
 6. Open /host.html to host the interactive session.
-7 Open /screen.html to see what the host want's to pick up from the chat.
+7. Open /screen.html to see what the host want's to pick up from the chat.
 
 # Requirements
 - Nerdy user
