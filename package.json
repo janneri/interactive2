@@ -6,6 +6,7 @@
   "license": "None given.",
   "devDependencies": {
     "connect": "~2.8.8",
-    "socket.io": "~0.9.16"
+    "socket.io": "~0.9.16",
+    "grunt-contrib-jshint": "~0.6.4"
   }
 }

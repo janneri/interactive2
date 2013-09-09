@@ -1,8 +1,7 @@
-'use strict';
-
 angular.module('igApp', ['btford.socket-io']).
     controller('HostCtrl', function ($scope, socket) {
-
+    
+    'use strict';
 
     $scope.messages = [];
     socket.on('message', function (data) {
@@ -37,13 +36,13 @@ angular.module('igApp', ['btford.socket-io']).
 
     $scope.select = function(msg) {
         socket.emit('screen', { msg: msg});        
-    }
+    };
 
     $scope.show_messages = function() {
         socket.emit('screen', { msg: null});
-    }
+    };
 
     $scope.delete_messages = function() {
         socket.emit('delete_messages');
-    }
+    };
 });

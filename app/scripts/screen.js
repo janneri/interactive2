@@ -1,7 +1,7 @@
-'use strict';
-
 angular.module('igApp', ['btford.socket-io']).
     controller('ScreenCtrl', function ($scope, socket) {
+
+    'use strict';
     
     $scope.messages = [];
     socket.on('message', function (data) {
